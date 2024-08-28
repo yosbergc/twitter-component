@@ -1,12 +1,12 @@
 import './user.css'
-function User() {
+function User({avatarSrc, name, username}) {
     return (<article className='user-container'>
         <header>
-            <img src="https://unavatar.io/midudev" alt="Midudev" />
+            <img src={avatarSrc} alt="Midudev" />
         </header>
         <div>
-            <strong>Miguel Angel Durán</strong>
-            <span>@midudev</span>
+            <strong>{name}</strong>
+            <span>@{username}</span>
         </div>
         <aside>
             <button>Seguir</button>
