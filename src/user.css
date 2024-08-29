@@ -2,6 +2,12 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: space-between;
+}
+.user-container-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .user-container img {
     width: 50px;
@@ -12,16 +18,33 @@
     display: flex;
     flex-direction: column;
 }
-.user-container aside button {
+.user-single-button {
     background-color: black;
-    color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
+    width: 150px;
+    transition: 0.2s ease-out;
+    color: white;
 }
-.user-container span {
-    color: rgb(53, 52, 52);
+
+.user-single-button.isFollowing:hover .follow-card-stopFollow {
+    display: block;
+}
+.user-single-button.isFollowing:hover .follow-card-main-text {
+    display: none;
+}
+.follow-card-stopFollow {
+    display: none;
+}
+.user-single-button:hover {
+    background-color: rgb(46, 46, 46);
+}
+.user-single-button.isFollowing:hover {
+    background-color: rgb(42, 0, 0);
+    border: 1px solid red;
+    color: rgb(255, 82, 82);
 }
